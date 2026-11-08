@@ -6,7 +6,7 @@ Role: creative director, quality control, tea delivery
 Pair: Claude
 Role: code, papel picado, emoji wrangling
 
-Client: Eileen
+Client: E
 Role: resting. Tapping buttons. Getting better.
 
 /* THANKS */
