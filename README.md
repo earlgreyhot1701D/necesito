@@ -63,6 +63,10 @@ A link with no number, or anything that isn't digits, shows a friendly "ask Shar
 |---|---|
 | `index.html` | The page. Generated, don't hand-edit. |
 | `build.js` | Builds `index.html` from the button list. |
+| `og.png` | Social card. The pretty preview in iMessage when you text the link. |
+| `apple-touch-icon.png` | Favicon and iPhone icon. |
+| `robots.txt` | Keeps search engines out. Someone's resting. |
+| `humans.txt` | Who made this. |
 
 ## Credits
 

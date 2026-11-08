@@ -1,0 +1,21 @@
+/* TEAM */
+Builder: L. Cordero (Shara)
+GitHub: earlgreyhot1701D
+Role: creative director, quality control, tea delivery
+
+Pair: Claude
+Role: code, papel picado, emoji wrangling
+
+Client: Eileen
+Role: resting. Tapping buttons. Getting better.
+
+/* THANKS */
+Té caliente. Cobijas extra. Sopita.
+
+/* SITE */
+Built: November 2026, on vacation, on a Chromebook
+Standards: HTML, CSS, a few lines of plain JavaScript
+Server: none
+Phone numbers in the code: zero
+
+AI assisted. Human approved. Powered by NLP.

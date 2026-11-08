@@ -1,0 +1,4 @@
+# Shh. Someone's resting.
+# This page is for one person. Nothing to crawl here.
+User-agent: *
+Disallow: /

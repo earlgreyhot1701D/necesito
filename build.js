@@ -37,6 +37,19 @@ const html = `<!DOCTYPE html>
 <meta name="apple-mobile-web-app-title" content="Necesito">
 <meta name="theme-color" content="#fff8ee">
 <title>¿Qué necesitas, mi amor?</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="What do you need, my love? Tap a button. I'll bring it.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="¿Qué necesitas, mi amor?">
+<meta property="og:description" content="What do you need, my love? Tap a button. I'll bring it.">
+<meta property="og:url" content="https://earlgreyhot1701d.github.io/necesito/">
+<meta property="og:image" content="https://earlgreyhot1701d.github.io/necesito/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Papel picado flags over the words ¿Qué necesitas, mi amor?">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="apple-touch-icon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Nunito:wght@700;800&display=swap" rel="stylesheet">
 <style>
