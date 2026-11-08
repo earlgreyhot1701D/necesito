@@ -57,6 +57,24 @@ A link with no number, or anything that isn't digits, shows a friendly "ask Shar
 - **No number, no buttons.** If the `#` part gets lost, the buttons turn off and the page asks for the link again.
 - **It doesn't check that I read the text.** It's a request button, not a pager.
 
+## v2 notes
+
+Not built yet. Notes for the next pass.
+
+- **Prefill "Otra cosa."** Her first tap was the blank button, and an empty text left her unsure what to do. v2 opens it with `Necesito... (I need...)` already typed, so the cursor lands in a sentence instead of a void.
+- **Watch SMS length once messages get longer.** A dev.to reader pointed out that one emoji switches a text from GSM-7 to UCS-2 encoding, which drops a single text from 160 characters to 70. The pre-written texts all fit today:
+
+| Button | Characters |
+|---|---|
+| Té, por favor | 30 |
+| Agua o jugo | 42 |
+| Otra cobija | 41 |
+| Sopita o algo de comer | 45 |
+| Luz baja y silencio | 54 (longest) |
+| Ven a sentarte conmigo | 44 |
+
+The open-ended "Otra cosa" text is where a long request could split into two. If she sends over iMessage, this limit doesn't apply. It only matters if a text goes out as plain SMS.
+
 ## Files
 
 | File | Job |
