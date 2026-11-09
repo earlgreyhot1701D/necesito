@@ -87,6 +87,12 @@ The test counts how many pieces each prewritten text would become and fails if a
 
 - **If v2 gets a typing box, count pieces instead of capping length.** The reader's idea: let her type as much as she wants, count the pieces, and label them, like "Necesito... (1 of 2)." A visible "1 of 2" is friendlier than a silent split. One catch for this app: today she finishes typing inside Messages, where the page can't see. Labeling only works if the typing happens on the page itself.
 
+- **How to test the counter, if it gets built.** The dev.to thread kept going, and three readers agreed on the same idea: test with the tricky cases, not just normal text.
+  - **Use the real phone rules,** not the plain character count JavaScript gives you. Emoji count as 2, and the 9 special symbols ({ } [ ] ~ ^ \ | €) count as 2 in plain SMS.
+  - **Test right at the edge.** Run the longest message at one character under the limit, at the limit, and one over, and check that the piece count changes where it should. If it changes one spot early, a special symbol is hiding in there.
+  - **Pin a few exact examples in the tests,** like a long run of € signs and a long run of emoji at the edge of one piece. If the counter gets those wrong, the counter is wrong, not the message.
+  - **Have the counter say which rules it used** (plain SMS or emoji mode) next to the piece count, so a wrong count is easier to track down.
+
 ## Files
 
 | File | Job |
