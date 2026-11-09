@@ -76,7 +76,16 @@ Not built yet. Notes for the next pass.
 The open-ended "Otra cosa" text is where a long request could split into two. If she sends over iMessage, this limit doesn't apply. It only matters if a text goes out as plain SMS.
 
 - **Accents count too, not just emoji.** A second dev.to reader pointed out that plain SMS uses a basic alphabet. Some Spanish accents are in it (é, ñ, ¿, ¡) and some aren't (á, í, ó, ú). One missing accent switches the whole text to the 70-character limit, the same as an emoji. "Necesito mas ayuda" fits in 160. "Necesito más ayuda" drops to 70. A few symbols ({ } [ ] ~ ^ \ | €) also count as two characters each. Today every prewritten text already has an emoji and all of them fit, so nothing breaks. If v2 ever drops the emoji or adds longer Spanish texts, words like "días" or "más" will shrink the limit quietly.
-- **Add a small test for it.** The reader's suggestion: keep a list of the basic SMS alphabet in a test, and check every prewritten text against it. Any text that uses a character outside the list gets flagged before it ships.
+- **Add a small test for it, and make it count pieces.** The same reader sharpened the idea. The real question isn't "does this text use the basic alphabet?" It's "does every prewritten text fit in one text?" Long texts get split into pieces, and each piece gives up a few characters to a hidden label that tells the phone how to put them back in order:
+
+| Type of text | Fits in one text | Each piece after a split |
+|---|---|---|
+| Plain letters | 160 | 153 |
+| With emoji or á, í, ó, ú | 70 | 67 |
+
+The test counts how many pieces each prewritten text would become and fails if any is more than one. Today all of them are one piece (the longest is 54 characters).
+
+- **If v2 gets a typing box, count pieces instead of capping length.** The reader's idea: let her type as much as she wants, count the pieces, and label them, like "Necesito... (1 of 2)." A visible "1 of 2" is friendlier than a silent split. One catch for this app: today she finishes typing inside Messages, where the page can't see. Labeling only works if the typing happens on the page itself.
 
 ## Files
 
