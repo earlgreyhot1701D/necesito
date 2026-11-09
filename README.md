@@ -75,6 +75,9 @@ Not built yet. Notes for the next pass.
 
 The open-ended "Otra cosa" text is where a long request could split into two. If she sends over iMessage, this limit doesn't apply. It only matters if a text goes out as plain SMS.
 
+- **Accents count too, not just emoji.** A second dev.to reader pointed out that plain SMS uses a basic alphabet. Some Spanish accents are in it (é, ñ, ¿, ¡) and some aren't (á, í, ó, ú). One missing accent switches the whole text to the 70-character limit, the same as an emoji. "Necesito mas ayuda" fits in 160. "Necesito más ayuda" drops to 70. A few symbols ({ } [ ] ~ ^ \ | €) also count as two characters each. Today every prewritten text already has an emoji and all of them fit, so nothing breaks. If v2 ever drops the emoji or adds longer Spanish texts, words like "días" or "más" will shrink the limit quietly.
+- **Add a small test for it.** The reader's suggestion: keep a list of the basic SMS alphabet in a test, and check every prewritten text against it. Any text that uses a character outside the list gets flagged before it ships.
+
 ## Files
 
 | File | Job |
